@@ -25,7 +25,7 @@ const Dashboard = () => {
     if (!token) return; // safety
 
     axios
-      .get("http://localhost:5000/api/admin/stats", {
+      .get("https://blog-platform-3-qvh1.onrender.com/api/admin/stats", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

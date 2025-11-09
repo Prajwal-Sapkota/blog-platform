@@ -8,7 +8,7 @@ const PostsManager = () => {
   // Fetch blogs
   const fetchBlogs = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/blogs");
+      const res = await axios.get("https://blog-platform-3-qvh1.onrender.com/api/blogs");
       setBlogs(res.data);
     } catch (err) {
       console.error(err);
@@ -24,7 +24,7 @@ const PostsManager = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this blog?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`);
+      await axios.delete(`https://blog-platform-3-qvh1.onrender.com/api/blogs/${id}`);
       toast.success("Blog deleted successfully!");
       fetchBlogs();
     } catch (err) {
@@ -58,7 +58,7 @@ const PostsManager = () => {
                 <td className="py-2 px-4">
                   {blog.image ? (
                     <img
-                      src={`http://localhost:5000${blog.image}`}
+                      src={`https://blog-platform-3-qvh1.onrender.com${blog.image}`}
                       alt={blog.title}
                       className="w-20 h-20 object-cover rounded"
                     />
