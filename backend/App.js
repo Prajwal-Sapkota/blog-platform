@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 
 // Enable CORS for frontend
-app.use(cors({ origin: "https://blog-platform-a9fa.vercel.app/", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 // Routes
 app.use("/api/blogs", blogRoutes);

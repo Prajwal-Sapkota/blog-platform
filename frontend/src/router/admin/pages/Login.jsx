@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://blog-platform-3-qvh1.onrender.com/api/admin/login", formData);
+      const res = await axios.post("http://localhost:5000/api/admin/login", formData);
       localStorage.setItem("token", res.data.token);
       setMessage("Login successful! Redirecting...");
       setTimeout(() => navigate("/admin"), 1500);

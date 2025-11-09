@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://blog-platform-3-qvh1.onrender.com/api/admin/register", formData);
+      const res = await axios.post("http://localhost:5000/api/admin/register", formData);
       setMessage("Registration successful! Redirecting to login...");
       setTimeout(() => navigate("/admin/login"), 1500);
     } catch (err) {
